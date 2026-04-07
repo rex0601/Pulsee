@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { Activity, LayoutDashboard, Radio, AlertTriangle, Globe, Settings, ChevronLeft, ChevronRight, LogOut, ChevronDown } from 'lucide-react';
 
@@ -8,7 +9,7 @@ const navItems = [
   { icon: LayoutDashboard, label: 'Dashboard', href: '/demo/dashboard' },
   { icon: Radio, label: 'Monitors', href: '/demo/monitors' },
   { icon: AlertTriangle, label: 'Incidents', href: '/demo/incidents' },
-  { icon: Globe, label: 'Status Page', href: '/demo/settings' },
+  { icon: Globe, label: 'Status Page', href: '/s/demo' },
   { icon: Settings, label: 'Settings', href: '/demo/settings' },
 ];
 
@@ -74,7 +75,10 @@ export default function Sidebar() {
           {collapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
           {!collapsed && <span className="text-[13px]">Collapse</span>}
         </button>
-        <button className={`w-full flex items-center gap-2.5 h-9 rounded-md text-gray-500 hover:bg-gray-100/60 hover:text-gray-900 transition-all ${collapsed ? 'justify-center px-0' : 'px-2.5'}`}>
+        <button
+          onClick={() => signOut({ callbackUrl: '/login' })}
+          className={`w-full flex items-center gap-2.5 h-9 rounded-md text-gray-500 hover:bg-gray-100/60 hover:text-gray-900 transition-all ${collapsed ? 'justify-center px-0' : 'px-2.5'}`}
+        >
           <LogOut className="w-4 h-4 text-gray-400" />
           {!collapsed && <span className="text-[13px]">Log out</span>}
         </button>

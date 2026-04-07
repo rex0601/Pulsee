@@ -82,7 +82,7 @@ export default function LandingPage() {
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Ready to start monitoring?</h2>
-          <p className="text-gray-500 mb-8">Free plan includes 5 monitors. No credit card required.</p>
+          <p className="text-gray-500 mb-8">Free plan includes 6 monitors. No credit card required.</p>
           <Link href="/signup" className="inline-flex items-center gap-2 px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white text-lg font-semibold rounded-lg transition-all active-scale shadow-lg shadow-purple-200">
             Get Started Free <ArrowRight className="w-5 h-5" />
           </Link>

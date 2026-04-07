@@ -94,8 +94,8 @@ export default function PublicStatusPage() {
             Powered by <Activity className="w-3 h-3" /> <span className="font-semibold text-zinc-500">Pulsee</span>
           </div>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-zinc-400 transition-colors">Terms</a>
-            <a href="#" className="hover:text-zinc-400 transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-zinc-400 transition-colors">Terms</a>
+            <a href="/privacy" className="hover:text-zinc-400 transition-colors">Privacy</a>
           </div>
         </div>
       </footer>
