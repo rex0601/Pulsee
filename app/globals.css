@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #F5F0FF;
+  --color-brand-100: #EBE0FF;
+  --color-brand-200: #D4BFFF;
+  --color-brand-300: #B794FF;
+  --color-brand-400: #9B6DFF;
+  --color-brand-500: #7B2FF2;
+  --color-brand-600: #6A1FE0;
+  --color-brand-700: #5015B0;
+  --color-brand-800: #3D0F85;
+  --color-brand-900: #2A0A5C;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background-color: rgba(123, 47, 242, 0.2); }
+
+/* Sidebar transition */
+.sidebar-transition { transition: width 300ms ease-out; }
+
+/* Active scale for buttons */
+.active-scale:active { transform: scale(0.98); }
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Uptime bar hover */
+.uptime-bar:hover { opacity: 0.8; }
+
+/* No scrollbar */
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
