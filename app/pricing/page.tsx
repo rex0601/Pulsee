@@ -6,7 +6,7 @@ const plans = [
     name: 'Free',
     price: '$0',
     period: 'forever',
-    features: ['6 monitors', '5 min check interval', '7-day data retention', '1 team member', '1 Slack channel'],
+    features: ['5 monitors', '5 min check interval', '7-day data retention', '1 team member', '1 Slack channel'],
     cta: 'Get Started',
     highlight: false,
   },

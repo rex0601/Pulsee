@@ -29,7 +29,7 @@ export default function SignupPage() {
             Start monitoring<br />in 2 minutes.
           </h2>
           <p className="text-white/60 text-lg leading-relaxed max-w-md">
-            Free plan includes 6 monitors.<br />No credit card required.
+            Free plan includes 5 monitors.<br />No credit card required.
           </p>
           <div className="mt-12 flex flex-wrap gap-2">
             {['HTTP Monitoring', 'Status Pages', 'Slack Alerts', 'Custom Domains'].map((f) => (
